@@ -115,6 +115,36 @@ export const LANGUAGES: Language[] = [
     region: 'East Asia & Commerce',
     badgeText: 'Sino-Tibetan',
     iconText: '中'
+  },
+  {
+    id: 'uz',
+    name: 'Uzbek',
+    nativeName: 'Oʻzbek',
+    abbreviation: 'UZ',
+    accentQuote: 'Kuch – adolatdadir. (Power is in justice.)',
+    region: 'Central Asia & Silk Road',
+    badgeText: 'Turkic',
+    iconText: 'Uz'
+  },
+  {
+    id: 'fa',
+    name: 'Persian',
+    nativeName: 'فارسی',
+    abbreviation: 'FA',
+    accentQuote: 'بی همگان بسر شود، بی‌تو بسر نمی‌شود.',
+    region: 'Western & Central Asia',
+    badgeText: 'Indo-Iranian',
+    iconText: 'فا'
+  },
+  {
+    id: 'tr',
+    name: 'Turkish',
+    nativeName: 'Türkçe',
+    abbreviation: 'TR',
+    accentQuote: 'Yurtta sulh, cihanda sulh.',
+    region: 'Eurasia & Mediterranean',
+    badgeText: 'Turkic',
+    iconText: 'Tr'
   }
 ];
 
@@ -122,7 +152,7 @@ export const FEATURES: AcademyFeature[] = [
   {
     id: 'live-classes',
     title: 'Live Interactive Classes',
-    description: 'Speak from day one. Participate in rigorous, small-group seminars guided by elite educators to develop conversational fluidity under guidance.',
+    description: 'Speak from day one. Participate in rigorous, small-group seminars guided by elite educators to develop conversational fluency under guidance.',
     tag: 'Synchronous'
   },
   {
@@ -132,15 +162,15 @@ export const FEATURES: AcademyFeature[] = [
     tag: '1-on-1 Guidance'
   },
   {
-    id: 'int-curriculum',
-    title: 'International CEFR Curriculum',
-    description: 'Accelerate through elegant, systematic learning pathways aligned with external international benchmarks for direct credit and transfer.',
-    tag: 'Verified CEFR'
-  },
+    id: 'free-demo',
+    title: 'Free Demo Class',
+    description: 'Experience Polyvox before enrolling. Join a free interactive demo class and discover our teaching approach, learning platform, and language programs firsthand.',
+    tag: 'Free Trial Access'
+},
   {
-    id: 'community-practice',
-    title: 'Immersive Speak-Up Spaces',
-    description: 'Connect and practice inside collaborative lounges, debate clubs, and localized chat lobbies designed to expand vocabulary comfortably.',
-    tag: 'Always Open'
-  }
+    id: 'live-doubt',
+    title: 'Extra Live Doubt Sessions',
+    description: 'Get additional support through dedicated live doubt-solving sessions where learners can ask questions, practice speaking, and strengthen concepts with expert guidance.',
+    tag: 'Student Support'
+}
 ];

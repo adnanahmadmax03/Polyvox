@@ -58,9 +58,9 @@ export const Navbar: React.FC = () => {
     if (langCard) {
       langCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
       // Temporary visually striking outline effect
-      langCard.classList.add('ring-2', 'ring-brand-blue');
+      langCard.classList.add('ring-2', 'ring-brand-accent');
       setTimeout(() => {
-        langCard.classList.remove('ring-2', 'ring-brand-blue');
+        langCard.classList.remove('ring-2', 'ring-brand-accent');
       }, 2000);
     }
   };
@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
                 POLYVOX
               </span>
               <span className="font-mono text-[6.5px] sm:text-[7.5px] font-bold tracking-widest text-[#14324F]/70 leading-none uppercase">
-                LAND OF LANGUAGES
+                SPEAK BEYOND BORDERS
               </span>
             </div>
           </div>
@@ -145,7 +145,7 @@ export const Navbar: React.FC = () => {
                         <button
                           key={lang.id}
                           onClick={() => handleLanguageClick(lang.id)}
-                          className="w-full text-left px-4 py-2 hover:bg-[#7A00C6] group flex items-center justify-between transition-colors duration-150 cursor-pointer"
+                          className="w-full text-left px-4 py-2 hover:bg-[#14215C] group flex items-center justify-between transition-colors duration-150 cursor-pointer"
                         >
                           <span className="font-sans font-bold text-neutral-700 group-hover:text-white transition-colors text-[12.5px]">
                             {lang.name}
@@ -168,7 +168,7 @@ export const Navbar: React.FC = () => {
               Features
             </button>
             <button
-              onClick={() => scrollToSection('newsletter')}
+              onClick={() => scrollToSection('contact')}
               className="hover:text-brand-blue transition-colors duration-200 cursor-pointer"
             >
               Contact
@@ -260,7 +260,7 @@ export const Navbar: React.FC = () => {
                 Features
               </button>
               <button
-                onClick={() => scrollToSection('newsletter')}
+                onClick={() => scrollToSection('contact')}
                 className="py-3 text-neutral-800 hover:text-brand-blue transition-colors cursor-pointer text-left"
               >
                 Contact

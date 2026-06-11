@@ -2,7 +2,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-blue: #7A00C6;
+  --color-brand-blue: #14215C;
+  --color-brand-accent: #00C894;
   --color-brand-offwhite: #F7F5F2;
   --color-brand-dark: #14324F;
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
@@ -20,6 +21,6 @@
 
 /* Custom fine line-gradient for the grid background pattern */
 .grid-dots {
-  background-image: radial-gradient(#7a00c60e 1.5px, transparent 1.5px);
+  background-image: radial-gradient(#14215c0e 1.5px, transparent 1.5px);
   background-size: 24px 24px;
 }

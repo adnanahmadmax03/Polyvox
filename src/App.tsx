@@ -9,6 +9,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Languages from './components/Languages';
 import Features from './components/Features';
+import Contact from './components/Contact';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
@@ -25,17 +26,20 @@ export default function App() {
         {/* 3. BRAND ETHOS & ACADEMY STORY */}
         <About />
 
-        {/* 4. 11 MINIMALIST LANGUAGE CARDS */}
+        {/* 4. 14 MINIMALIST LANGUAGE CARDS */}
         <Languages />
 
         {/* 5. EXPERIMENTAL CORE VALUES & FEATURES */}
         <Features />
 
-        {/* 6. IMMERSIVE TICKET GENERATOR & WAITLIST */}
+        {/* 6. IMMERSIVE CONTACT FORM */}
+        <Contact />
+
+        {/* 7. IMMERSIVE TICKET GENERATOR & WAITLIST */}
         <Newsletter />
       </main>
 
-      {/* 7. GLOBALLY STRUCTURED FOOTER */}
+      {/* 8. GLOBALLY STRUCTURED FOOTER */}
       <Footer />
     </div>
   );

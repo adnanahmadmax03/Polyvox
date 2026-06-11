@@ -25,6 +25,22 @@ export const Hero: React.FC = () => {
     }
   };
 
+  const scrollToLanguages = () => {
+    const element = document.getElementById('languages');
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   // Cultural/greetings to serve as sophisticated background shapes
   const floatingGreetings = [
     { text: 'Bonjour', x: '12%', y: '18%', delay: 0.1, rotate: -6 },
@@ -116,17 +132,17 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Hero Central Content Container */}
-      <div className="relative max-w-4xl mx-auto text-center z-10 flex flex-col items-center">
+      <div className="relative max-w-5xl mx-auto text-center z-10 flex flex-col items-center">
         {/* "Launching Soon" luxury modern tag */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-blue/5 border border-brand-blue/15 shadow-xs rounded-full mb-8"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brand-accent/5 border border-brand-accent/20 shadow-xs rounded-full mb-8"
         >
-          <Stars size={13} className="text-brand-blue animate-pulse" />
-          <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-brand-blue">
-            Launching Autumn 2026
+          <Stars size={13} className="text-brand-accent animate-pulse" />
+          <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-brand-accent">
+            OPEN FOR LEARNERS
           </span>
         </motion.div>
 
@@ -140,8 +156,8 @@ export const Hero: React.FC = () => {
           <span className="font-sans font-black tracking-[0.22em] text-3xl sm:text-4xl text-[#14324F] leading-none uppercase">
             POLYVOX
           </span>
-          <span className="font-mono text-[11px] sm:text-xs font-bold tracking-[0.16em] text-[#7A00C6] uppercase">
-            Land of Languages
+          <span className="font-mono text-[11px] sm:text-xs font-bold tracking-[0.16em] text-[#14215C] uppercase">
+            SPEAK BEYOND BORDERS
           </span>
         </motion.div>
 
@@ -152,21 +168,24 @@ export const Hero: React.FC = () => {
           transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mb-6"
         >
-          <motion.h1
-            animate={{ 
-              y: [0, -10, 0],
-              rotate: [0, -0.4, 0.4, 0]
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 7,
-              ease: "easeInOut"
-            }}
-            style={{ willChange: "transform" }}
-            className="font-sans text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter text-[#14324F] leading-none uppercase"
+          <h1
+            className="font-sans text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-[#14324F] leading-none uppercase sm:whitespace-nowrap"
           >
-            Coming Soon
-          </motion.h1>
+            LEARN. SPEAK.{' '}
+            <motion.span
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.5,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              style={{ display: 'inline-block', transformOrigin: 'center' }}
+              className="text-brand-accent"
+            >
+              GROW.
+            </motion.span>
+          </h1>
         </motion.div>
 
         {/* Subheadline description */}
@@ -176,7 +195,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl text-base sm:text-lg md:text-xl font-normal tracking-wide text-neutral-600 leading-relaxed mb-10"
         >
-          Master global languages with immersive, modern, and practical learning experiences. Built from ground up for builders, career expansionists, and global citizens.
+          From your classroom to the world — learn, speak, and grow with every lesson.
         </motion.p>
 
         {/* Action Button CTA Groups */}
@@ -184,13 +203,19 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center justify-center"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto px-4 sm:px-0"
         >
           <button
             onClick={scrollToWaitlist}
-            className="px-12 py-4 bg-brand-blue hover:bg-brand-blue/90 text-white font-bold text-xs tracking-widest uppercase rounded-sm shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 cursor-pointer border border-brand-blue"
+            className="w-full sm:w-auto px-12 py-4 bg-brand-blue hover:bg-brand-blue/90 text-white font-bold text-xs tracking-widest uppercase rounded-sm shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 cursor-pointer border border-brand-blue"
           >
-            Join Waitlist
+            Enroll Now
+          </button>
+          <button
+            onClick={scrollToLanguages}
+            className="w-full sm:w-auto px-12 py-4 bg-transparent hover:bg-brand-accent/5 text-brand-accent font-bold text-xs tracking-widest uppercase rounded-sm shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer border border-brand-accent"
+          >
+            Explore Courses
           </button>
         </motion.div>
       </div>

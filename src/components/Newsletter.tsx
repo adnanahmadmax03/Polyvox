@@ -10,7 +10,7 @@ import { WaitlistRecord } from '../types';
 import { LANGUAGES } from '../data';
 
 export const Newsletter: React.FC = () => {
-  return null /*temp hidden section */
+  return null; /*temp hidden section */
   const [email, setEmail] = useState('');
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [learningGoal, setLearningGoal] = useState('professional');
@@ -126,7 +126,7 @@ export const Newsletter: React.FC = () => {
               >
                 {/* Headline group */}
                 <div className="text-center space-y-3">
-                  <span className="font-mono text-[9px] font-bold tracking-widest uppercase text-brand-blue bg-brand-blue/5 px-2.5 py-1 rounded-full">
+                  <span className="font-mono text-[9px] font-bold tracking-widest uppercase text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full">
                     Exclusive Early Access
                   </span>
                   <h2 className="font-sans text-2xl sm:text-3.5xl font-extrabold text-[#14324F] tracking-tight">
@@ -140,8 +140,8 @@ export const Newsletter: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-8 max-w-2xl mx-auto">
                   {/* Goal Dropdown and Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-1.5Col">
-                      <label htmlFor="email-input" className="block font-mono text-[10px] font-bold tracking-widest uppercase text-neutral-400 mb-1">
+                    <div className="space-y-1.5 flex flex-col">
+                      <label htmlFor="email-input" className="block font-mono text-[10px] font-bold tracking-widest uppercase text-neutral-400 mb-1 animate-none select-none">
                         Primary Email Address
                       </label>
                       <div className="relative">
@@ -235,7 +235,7 @@ export const Newsletter: React.FC = () => {
                 className="text-center py-6 space-y-8 relative z-10"
               >
                 {/* Confirmation check circle */}
-                <div className="mx-auto w-14 h-14 bg-green-50 text-green-600 flex items-center justify-center rounded-full border border-green-200">
+                <div className="mx-auto w-14 h-14 bg-brand-accent/10 text-brand-accent flex items-center justify-center rounded-full border border-brand-accent/20">
                   <Check size={26} />
                 </div>
 
@@ -262,7 +262,7 @@ export const Newsletter: React.FC = () => {
                     </div>
                     <div className="text-right">
                       <span className="font-mono text-[9px] font-bold text-neutral-400 uppercase">PRIORITY LEVEL</span>
-                      <span className="block font-mono text-[11px] font-bold text-brand-blue">EARLY ELITE</span>
+                      <span className="block font-mono text-[11px] font-bold text-brand-accent">EARLY ELITE</span>
                     </div>
                   </div>
 
@@ -275,7 +275,7 @@ export const Newsletter: React.FC = () => {
                       </div>
                       <div>
                         <span className="block font-mono text-[9px] text-neutral-400 tracking-wider uppercase mb-0.5">QUEUE POSITION</span>
-                        <span className="font-mono font-bold text-brand-blue text-[#14324F]">#{waitlistNumber}</span>
+                        <span className="font-mono font-bold text-brand-accent">#{waitlistNumber}</span>
                       </div>
                     </div>
 

@@ -10,14 +10,7 @@ import { LANGUAGES } from '../data';
 import { Language } from '../types';
 
 export const Languages: React.FC = () => {
-  const [selectedFamily, setSelectedFamily] = useState<string>('All');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-
-  const families = ['All', 'Romance', 'East Asian', 'Germanic', 'Semitic', 'Slavic'];
-
-  const filteredLanguages = selectedFamily === 'All'
-    ? LANGUAGES
-    : LANGUAGES.filter(lang => lang.badgeText === selectedFamily);
 
   return (
     <section id="languages" className="py-24 md:py-32 bg-brand-offwhite scroll-mt-20">
@@ -29,38 +22,21 @@ export const Languages: React.FC = () => {
             Polyvox Curriculum
           </span>
           <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-[#14324F] tracking-tight">
-            Eleven Gates to the World.
+            Fourteen Gates to the World.
           </h2>
           <p className="font-sans text-sm text-neutral-500 leading-relaxed max-w-lg mx-auto">
             Explore our meticulously designed pathways. Each language is treated as an immersive cultural ecosystem, built from basic phonetics to professional articulation.
           </p>
-
-          {/* Interactive filter badges */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-6" id="language-families">
-            {families.map((family) => (
-              <button
-                key={family}
-                onClick={() => setSelectedFamily(family)}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-200 cursor-pointer ${
-                  selectedFamily === family
-                    ? 'bg-brand-blue text-white shadow-xs'
-                    : 'bg-white text-[#14324F]/70 border border-brand-dark/10 hover:border-brand-blue hover:text-brand-blue'
-                }`}
-              >
-                {family}
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* 11 Languages Grid */}
+        {/* 14 Languages Grid */}
         <motion.div 
           layout
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           id="languages-grid"
         >
           <AnimatePresence mode="popLayout">
-            {filteredLanguages.map((lang) => {
+            {LANGUAGES.map((lang) => {
               const isHovered = hoveredId === lang.id;
               
               return (
@@ -75,7 +51,7 @@ export const Languages: React.FC = () => {
                   onMouseEnter={() => setHoveredId(lang.id)}
                   onMouseLeave={() => setHoveredId(null)}
                   style={{
-                    borderColor: isHovered ? '#7A00C6' : 'rgba(20, 50, 79, 0.05)',
+                    borderColor: isHovered ? '#14215C' : 'rgba(20, 50, 79, 0.05)',
                   }}
                   id={`lang-card-${lang.id}`}
                 >
@@ -85,12 +61,8 @@ export const Languages: React.FC = () => {
                   </div>
 
                   <div>
-                    {/* Header: Class family and typographic abbreviation */}
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="font-mono text-[9px] font-bold tracking-widest uppercase text-neutral-400 bg-neutral-100 px-2 py-0.5 rounded-xs">
-                        {lang.badgeText}
-                      </span>
-                      
+                    {/* Header: Typographic abbreviation aligned right */}
+                    <div className="flex items-center justify-end mb-4">
                       {/* Typographic emblem representing elegance */}
                       <span className="font-mono text-xs font-bold text-neutral-300 group-hover:text-brand-blue transition-colors duration-200">
                         {lang.abbreviation} · {lang.iconText}
@@ -115,7 +87,7 @@ export const Languages: React.FC = () => {
 
                   {/* Footing detail */}
                   <div className="pt-4 border-t border-dashed border-neutral-100 flex items-center gap-2 text-[10.5px] text-neutral-500 font-medium">
-                    <Globe2 size={12} className="text-neutral-400 group-hover:text-[#7A00C6] transition-colors" />
+                    <Globe2 size={12} className="text-neutral-400 group-hover:text-[#14215C] transition-colors" />
                     <span className="truncate">{lang.region}</span>
                   </div>
                 </motion.div>

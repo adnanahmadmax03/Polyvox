@@ -25,7 +25,7 @@ export const About: React.FC = () => {
             </div>
             
             {/* Elegant visual block representing premium high-culture literature vibe */}
-            <div className="relative mt-8 p-6 bg-brand-offwhite border-l-2 border-brand-blue/30 italic text-neutral-600 font-serif text-sm leading-relaxed rounded-r-xs hidden lg:block">
+            <div className="relative mt-8 p-6 bg-brand-offwhite border-l-2 border-brand-accent/50 italic text-neutral-600 font-serif text-sm leading-relaxed rounded-r-xs hidden lg:block">
               "To have another language is to possess a second soul."
               <span className="block mt-2 font-mono text-[9px] uppercase tracking-widest text-[#14324F]/70 italic not-italic">
                 — Charlemagne
@@ -42,8 +42,8 @@ export const About: React.FC = () => {
             {/* Three Pillar Points */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-4 border-t border-brand-dark/5">
               <div className="space-y-3" id="pillar-cultural">
-                <div className="w-8 h-8 rounded-full bg-brand-blue/5 flex items-center justify-center">
-                  <Globe size={15} className="text-brand-blue" />
+                <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center">
+                  <Globe size={15} className="text-brand-accent" />
                 </div>
                 <h3 className="font-sans font-bold text-[#14324F] text-sm tracking-tight">Cultural Context</h3>
                 <p className="font-sans text-xs text-neutral-500 leading-relaxed">
@@ -52,8 +52,8 @@ export const About: React.FC = () => {
               </div>
 
               <div className="space-y-3" id="pillar-practical">
-                <div className="w-8 h-8 rounded-full bg-brand-blue/5 flex items-center justify-center">
-                  <MessageSquare size={15} className="text-brand-blue" />
+                <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center">
+                  <MessageSquare size={15} className="text-brand-accent" />
                 </div>
                 <h3 className="font-sans font-bold text-[#14324F] text-sm tracking-tight">Active Speech</h3>
                 <p className="font-sans text-xs text-neutral-500 leading-relaxed">
@@ -62,8 +62,8 @@ export const About: React.FC = () => {
               </div>
 
               <div className="space-y-3" id="pillar-academic">
-                <div className="w-8 h-8 rounded-full bg-brand-blue/5 flex items-center justify-center">
-                  <BookOpen size={15} className="text-brand-blue" />
+                <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center">
+                  <BookOpen size={15} className="text-brand-accent" />
                 </div>
                 <h3 className="font-sans font-bold text-[#14324F] text-sm tracking-tight">CEFR Rigor</h3>
                 <p className="font-sans text-xs text-neutral-500 leading-relaxed">
