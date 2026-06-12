@@ -83,7 +83,11 @@ export const Navbar: React.FC = () => {
             id="nav-logo-group"
           >
             {/* Minimalist logo symbol */}
-            <Logo size={36} showWordmark={false} className="transition-transform duration-500 group-hover:rotate-12" />
+            <Logo
+                size={36}
+                showWordmark={false}
+                className="text-[#14215c] transition-transform duration-500 group-hover:rotate-12"
+            />
             <div className="flex flex-col">
               <span className="font-sans font-extrabold tracking-widest text-[#14324F] text-base leading-tight">
                 POLYVOX

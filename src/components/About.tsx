@@ -65,9 +65,9 @@ export const About: React.FC = () => {
                 <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center">
                   <BookOpen size={15} className="text-brand-accent" />
                 </div>
-                <h3 className="font-sans font-bold text-[#14324F] text-sm tracking-tight">CEFR Rigor</h3>
+                <h3 className="font-sans font-bold text-[#14324F] text-sm tracking-tight">Immersive Learning</h3>
                 <p className="font-sans text-xs text-neutral-500 leading-relaxed">
-                  Organized, verified learning framework aligned with global benchmarks for measurable fluency gains.
+                  Acquire fluency through immersive practice, interaction, and cultural exposure.
                 </p>
               </div>
             </div>

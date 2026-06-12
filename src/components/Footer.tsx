@@ -28,7 +28,11 @@ export const Footer: React.FC = () => {
               id="footer-brand-logo"
             >
               {/* White inverted logo representation */}
-              <Logo size={42} showWordmark={false} className="opacity-95 group-hover:scale-105 transition-transform" light={true} />
+              <img
+                 src="/logo 2.svg"
+                 alt="Polyvox"
+                 className="w-[42px] h-[42px] opacity-95 group-hover:scale-105 transition-transform"
+              />
               <div className="flex flex-col">
                 <span className="font-sans font-extrabold tracking-widest text-[#F7F5F2] text-md leading-tight">
                   POLYVOX
@@ -76,10 +80,10 @@ export const Footer: React.FC = () => {
             </div>
             
             <div className="flex items-center gap-4 pt-2">
-              <a href="#linkedin" aria-label="LinkedIn" className="text-white/70 hover:text-white hover:scale-110 transition-all duration-300">
+              <a href="https://www.linkedin.com/company/polyvox-in/" aria-label="LinkedIn" className="text-white/70 hover:text-white hover:scale-110 transition-all duration-300">
                 <Linkedin size={16} />
               </a>
-              <a href="#instagram" aria-label="Instagram" className="text-white/70 hover:text-white hover:scale-110 transition-all duration-300">
+              <a href="https://www.instagram.com/polyvox.in?igsh=NDZoMjA4dHN5aDRw" aria-label="Instagram" className="text-white/70 hover:text-white hover:scale-110 transition-all duration-300">
                 <Instagram size={16} />
               </a>
               <a href="#youtube" aria-label="YouTube" className="text-white/70 hover:text-white hover:scale-110 transition-all duration-300">

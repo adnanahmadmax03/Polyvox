@@ -13,7 +13,7 @@ const Logo: React.FC<LogoProps> = ({
 }) => {
   return (
     <img
-      src="/logo.png"
+      src="/logo.svg"
       alt="Polyvox Logo"
       className={className}
       style={{

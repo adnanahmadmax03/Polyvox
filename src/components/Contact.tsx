@@ -172,7 +172,7 @@ export const Contact: React.FC = () => {
                 <div className="flex items-center justify-center md:justify-start gap-3 px-3 py-2">
                   {/* LinkedIn */}
                   <a 
-                    href="#linkedin"
+                    href="https://www.linkedin.com/company/polyvox-in/"
                     aria-label="LinkedIn"
                     className="w-11 h-11 rounded-full bg-[#14215c]/5 hover:bg-[#14215c] hover:scale-110 text-[#14215c] hover:text-white flex items-center justify-center transition-all duration-300 shadow-xs"
                     id="contact-linkedin-link"
@@ -182,7 +182,7 @@ export const Contact: React.FC = () => {
 
                   {/* Instagram */}
                   <a 
-                    href="#instagram"
+                    href="https://www.instagram.com/polyvox.in?igsh=NDZoMjA4dHN5aDRw"
                     aria-label="Instagram"
                     className="w-11 h-11 rounded-full bg-[#14215c]/5 hover:bg-[#14215c] hover:scale-110 text-[#14215c] hover:text-white flex items-center justify-center transition-all duration-300 shadow-xs"
                     id="contact-instagram-link"
